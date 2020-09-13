@@ -79,6 +79,21 @@ After these instructions, you can see `http-ingest` as defined streams.
 - Click `play` button
 - You can see `Deploy Stream Definition http-ingest` page then click `Deploy stream` button with parameters by default
 
+You can see the port that the application listen on and you can curl it.
+
+```
+$ curl -v http://localhost:20003 -H "Content-type: text/plain" -d "Happy streaming"
+```
+
+Is it ok to return 401 on my environment?
+
+## Check the log on your console
+
+```
+$ docker exec -ti skipper tail -f /path/from/stdout/textbox/in/dashboard
+```
+
+You can confirm the path of the log from the web page `Runtime` -> `http-ingest.log` -> `stdout`
 
 # References
 [Getting Started with Stream Processing](https://dataflow.spring.io/docs/stream-developer-guides/getting-started/stream/)
