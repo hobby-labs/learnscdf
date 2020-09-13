@@ -42,7 +42,22 @@ exoprt HOST_MOUNT_PATH=/tmp/myapps
 $ app register --type source --name my-app --uri file://root/scdf/my-app-1.0.0.RELEASE.jar
 ```
 
+## Maven Local Repository Mounting
 
+```
+export HOST_MOUNT_PATH=~/.ms
+export DOCKER_MOUNT_PATH=/root/.m2/
+```
+
+`maven://` URI を使用することで、ホストのmaven リポジトリ(~/.m2)にインストールされているjar を自動的に解決することができます。
+
+```
+app register --type processor --name pose-estimation \
+    --uri maven://org.springframework.cloud.stream.app:pose-estimation-processor-rabbit:2.0.2.BUILD-SNAPSHOT \
+    --metadata-uri maven://org.springframework.cloud.stream.app:pose-estimation-processor-rabbit:jar:metadata:2.0.2.BUILD-SNAPSHOT
+```
+
+上記の戦略を取ることで、ホスト側にインストールされているビルド/インストールされているアプリケーションを利用することができるようになります。
 
 
 # References
