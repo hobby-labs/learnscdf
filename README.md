@@ -57,7 +57,27 @@ app register --type processor --name pose-estimation \
     --metadata-uri maven://org.springframework.cloud.stream.app:pose-estimation-processor-rabbit:jar:metadata:2.0.2.BUILD-SNAPSHOT
 ```
 
-上記の戦略を取ることで、ホスト側にインストールされているビルド/インストールされているアプリケーションを利用することができるようになります。
+You can use applications that built/installed applications on your host machine.
+
+# Development
+## Getting Started with Stream Processing
+Reference: [Getting Started with Stream Processing](https://dataflow.spring.io/docs/stream-developer-guides/getting-started/stream/)
+
+```
+http://localhost:9393/dashboard
+```
+
+- Click `Streams` -> `Create Stream(s)`  
+- Enter the text `http | log` in the text area  
+- Click `Create stream(s)`  
+- Enter `http-ingest` for the stream name then click `Create the stream`  
+
+After these instructions, you can see `http-ingest` as defined streams.
+
+## Deploying a stream
+
+- Click `play` button
+- You can see `Deploy Stream Definition http-ingest` page then click `Deploy stream` button with parameters by default
 
 
 # References
