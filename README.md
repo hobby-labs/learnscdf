@@ -45,7 +45,7 @@ $ app register --type source --name my-app --uri file://root/scdf/my-app-1.0.0.R
 ## Maven Local Repository Mounting
 
 ```
-export HOST_MOUNT_PATH=~/.ms
+export HOST_MOUNT_PATH=~/.m2
 export DOCKER_MOUNT_PATH=/root/.m2/
 ```
 
@@ -97,3 +97,4 @@ You can confirm the path of the log from the web page `Runtime` -> `http-ingest.
 
 # References
 [Getting Started with Stream Processing](https://dataflow.spring.io/docs/stream-developer-guides/getting-started/stream/)
+[tream Processing with Apache Kafka](https://dataflow.spring.io/docs/stream-developer-guides/streams/standalone-stream-kafka/)
